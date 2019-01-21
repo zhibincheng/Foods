@@ -23,7 +23,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     
 //    @IBOutlet weak var tableView: UITableView!
 //    var menus = ["Main", "Swift", "Java", "Go", "NonMenu"]
-    var mainViewController: UIViewController!
+//    var mainViewController: UIViewController!
 //    var swiftViewController: UIViewController!
 //    var javaViewController: UIViewController!
 //    var goViewController: UIViewController!
@@ -63,11 +63,11 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         super.viewDidAppear(animated)
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-//        self.imageHeaderView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 160)
-        self.view.layoutIfNeeded()
-    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+////        self.imageHeaderView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 160)
+//        self.view.layoutIfNeeded()
+//    }
     
     func changeViewController(_ menu: LeftMenu) {
 //        switch menu {

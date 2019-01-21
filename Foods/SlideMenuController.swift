@@ -19,9 +19,9 @@ import UIKit
 }
 
 public struct SlideMenuOptions {
-    public static var leftViewWidth: CGFloat = 270.0
+    public static var leftViewWidth: CGFloat = 170.0 //左Menu的宽度
     public static var leftBezelWidth: CGFloat? = 16.0
-    public static var contentViewScale: CGFloat = 0.96
+    public static var contentViewScale: CGFloat = 1 //主屏幕视图缩小多少
     public static var contentViewOpacity: CGFloat = 0.5
     public static var contentViewDrag: Bool = false
     public static var shadowOpacity: CGFloat = 0.0
@@ -341,7 +341,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     open func isTagetViewController() -> Bool {
-        // Function to determine the target ViewController
+        // 感觉只用在手势识别时，如果不是Targe就不触发，屏幕边缘左右滑动时，就不会拉出Menu来
         // Please to override it if necessary
         return true
     }

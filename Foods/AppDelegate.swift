@@ -25,16 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
         
-        UINavigationBar.appearance().tintColor = UIColor.gray//(hex: "689F38")
+//        UINavigationBar.appearance().tintColor = UIColor.gray//(hex: "689F38")
         
-        leftViewController.mainViewController = nvc
+//        leftViewController.mainViewController = nvc
         
-        let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
-        slideMenuController.automaticallyAdjustsScrollViewInsets = true
+        let slideMenuController = ExSlideMenuController(
+                                            mainViewController:nvc,
+                                            leftMenuViewController: leftViewController,
+                                            rightMenuViewController: rightViewController)
+        //这行是以前的方法弃用了，iOS11用Scrollview.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        //但目前还不知道啥时Scrollview，可能是TableView吧？先注释掉，别删
+//        slideMenuController.automaticallyAdjustsScrollViewInsets = true
         slideMenuController.delegate = mainViewController
-        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
+//        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
         self.window?.rootViewController = slideMenuController
-        self.window?.makeKeyAndVisible()
+//        self.window?.makeKeyAndVisible() //让当前UIWindow变成keyWindow，并显示出来
     }
     
     
